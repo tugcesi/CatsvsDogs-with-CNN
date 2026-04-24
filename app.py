@@ -77,7 +77,7 @@ uploaded_file = st.file_uploader(
 if uploaded_file is not None:
     original_img, img_array = preprocess_image(uploaded_file)
 
-    st.image(original_img, caption="Yüklenen Görsel", use_container_width=False)
+    st.image(original_img, caption="Yüklenen Görsel", use_container_width=True)
 
     if st.button("Tahmin Et 🔍", disabled=(model is None)):
         with st.spinner("Tahmin yapılıyor…"):
